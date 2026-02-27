@@ -83,15 +83,64 @@ you can use this command to get the token：
 openclaw config get gateway.auth.dangerouslyDisableDeviceAuth.token
 ```
 
+##　Openclaw architecture
+
+`Workspace`, `Agent` and `Session` form the openclaw running architecture. The full architecture look like following:
+
+```
+Workspace
+   ├── Agent A
+   │      ├── Session 1
+   │      ├── Session 2
+   │
+   ├── Agent B
+   │      ├── Session 3
+```
+
+### Workspace
+Workspace is the complete running enviroment container, which contain follow:
+
+- Agents
+- Memory
+- Tools
+- Session
+
+### Agents
+Agent is a `AI character`, which define following:
+- Which AI Model is used
+- System prompt (Which character/personality) setup
+- Which tool can be used
+- Which memory can be accessed
+- Action policy
+
+What does Angetn doesn't contain:
+- chat history
+- user history
+those content is in session
+
+Agent define following:
+- Answering style
+- which tool can be involked
+- internet access
+- long term memory allow 
 
 
+### Session
+Session is a chat instance, each session contain:
+- independent chat context
+- chat history
+- short term state
 
+For instance: the Telegram chatering agent chat with 2 human user:
+```
+User A -> Session A
+User B -> Session B
+```
 
-
-
-
-
-
+What does Session folder save:
+- Chat history
+- current task state
+- tempory context
 
 
 
