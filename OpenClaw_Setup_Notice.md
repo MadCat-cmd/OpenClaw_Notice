@@ -37,5 +37,67 @@ following configuration of `gateway` section should setup:
   openclaw config set gateway.controlUi.dangerouslyAllowHostHeaderOriginFallback true
   ```
 
+After those openclaw setup, you can check your new setup in configuration file `cpenclaw.json`. In the configuration file you should be able see those new section in `gateway` section:
+
+```
+    "controlUi": {
+      "dangerouslyAllowHostHeaderOriginFallback": true,
+      "allowInsecureAuth": true,
+      "dangerouslyDisableDeviceAuth": true
+    },
+
+```
+
+you can also get those configuration value via following command:
+
+```
+# get dangerouslyAllowHostHeaderOriginFallback value
+openclaw config get gateway.controlUi.dangerouslyAllowHostHeaderOriginFallback
+
+# get allowInsecureAuth value
+openclaw config get gateway.controlUi.allowInsecureAuth
+
+# get dangerouslyDisableDeviceAuth value
+openclaw config get gateway.controlUi.dangerouslyDisableDeviceAuth
+```
+
+
+After the setup has been finished, you can connect the dashboard in local lan. Use following command to get the openclaw status:
+
+```
+openclaw status
+```
+
+you can see the the dasboard adress in the table, you can also use following command to check the dashbaord adress and the token:
+
+```
+openclaw dashboard --no-open
+```
+
+
+type this adress in your browser, you should see the dashboard content. But if you want to interactive with the dashboard, you should use the token 
+to login. Go to dashboard overview, type your token in `Gateway Token` section, and click connect. Your token can be find in `config,json` file. or 
+you can use this command to get the token：
+
+```
+openclaw config get gateway.auth.dangerouslyDisableDeviceAuth.token
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
