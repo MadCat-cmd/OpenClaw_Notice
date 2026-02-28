@@ -104,6 +104,10 @@ Workspace is the complete running enviroment container, which contain follow:
 - Memory
 - Tools
 - Session
+- Model
+- Logs
+- Vector Index
+- Device Identity
 
 ### Agents
 Agent is a `AI character`, which define following:
@@ -141,6 +145,59 @@ What does Session folder save:
 - Chat history
 - current task state
 - tempory context
+
+### Memory
+Memory is cross-session long term system
+
+There are 2 kind of memory
+- Short term Memory:
+  exist in session, for continue chat session
+
+- Long-term Memory:
+  exist in workspace, which contain:
+  - database
+  - embeddings
+  - user data
+  - import fact
+
+
+For instance:
+When you in telegram say: 
+>I am ...
+
+Memory record this content, and you ask in feishu:
+>who am I
+
+The angent can always anwser it. 
+
+### Tools
+Tools define the function involking capability of agent, such as:
+- command execution
+- api involking
+- database access
+- read wirte file
+- camera control
+
+### Model
+in workspace save:
+- default Model
+- Each Agent bind to a model
+- model parameter
+
+### Logs
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
