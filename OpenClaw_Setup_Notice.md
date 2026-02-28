@@ -185,6 +185,25 @@ in workspace save:
 - model parameter
 
 ### Logs
+Logs contain following:
+- involking history
+- tools execution history
+- error messages
+- running logs
+
+### Vector Index
+Vecotr Index is for:
+- RAG
+- semantic search
+- long term memory searching index
+
+
+### Device Identity
+Device Identity is for:
+- Web UI authentication
+- Multi-Device authentication
+- encryption sign
+
 
 
 
