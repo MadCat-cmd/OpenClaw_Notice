@@ -29,7 +29,7 @@ following configuration of `gateway` section should setup:
 - set `dangerouslyDisableDeviceAuth` to true,  disables Control UI device identity checks and is a severe security downgrade. Revert quickly after emergency use.
 
   ```
-  openclaw config get gateway.controlUi.dangerouslyDisableDeviceAuth
+  openclaw config set gateway.controlUi.dangerouslyDisableDeviceAuth true
   ```
 
 -  enables Host-header origin fallback mode, but is a dangerous security downgrade
