@@ -97,6 +97,20 @@ Workspace
    │      ├── Session 3
 ```
 
+Here is a example, how can a openclaw deploment look like:
+```
+一个 Workspace
+    ├── Agent A（客服机器人）
+    │       ├── Telegram Session 1
+    │       ├── Telegram Session 2
+    │       ├── WhatsApp Session 3
+    │       ├── 飞书 Session 4
+    │
+    ├── Agent B（代码助手）
+    │       ├── Telegram Session 5
+```
+
+
 ### Workspace
 Workspace is the complete running enviroment container, which contain follow:
 
